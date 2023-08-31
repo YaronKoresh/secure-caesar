@@ -1,0 +1,19 @@
+{
+  "name": "secure-caesar",
+  "main": "./index.js",
+  "version": "1.0.0",
+  "description": "secure-caesar cipher, is a symetric key cipher, based on caesar shift cipher. Enhanced with new algorithms, unicode support, PKCS #1 padding, secure password generator with length-by-demand & secure random number generator.",
+  "author": "Yaron Koresh <aharonkoresh1@gmail.com>",
+  "scripts": {
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/YaronKoresh/secure-caesar/raw/master/LICENSE"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YaronKoresh/secure-caesar.git"
+  },
+  "dependencies": { }
+}
