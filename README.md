@@ -11,6 +11,10 @@
 
 * Secure random number generator.
 
+* Versions before v3.0.0 are discovered to be NOT SECURE, because of patterns that are being generated.
+
+* Please upgrade to v3.0.0 ASAP.
+
 # Example
 
 ```
@@ -19,6 +23,18 @@
 import "secure-caesar" // or: require("secure-caesar");
 
 // Now you have a new global async function, called: "SecureCaesar"
+
+// Create a key
+const key = await SecureCaesar( "Key" );
+
+// Encrypt
+const ciphertext = await SecureCaesar( "Encrypt", key, "welcome to the cyberzone!" );
+
+// Decrypt
+const plaintext = await SecureCaesar( "Decrypt", key, ciphertext );
+
+// "welcome to the cyberzone!"
+console.log(plaintext);
 ```
 
 ---
@@ -31,49 +47,22 @@ We have 3 actions:
 
 * Generate a password to use with the `Encrypt`/`Decrypt` actions listed below.
 
-* One optional parameter: key length.
+* One optional parameter: key length (default = 1).
 
-* * The real length will be multiplied by 128 & will have a starting "K" character.
-
-* * The "K" is just for the password to never become an integer, even with JSON.stringify, so it can be send to your server, to encrypt each server response with a new key.
-
-* An example: `await SecureCaesar( "Key" )`.
+* * The real length of the new key, will be much longer, that number is just a factor for the new key real length.
 
 # Encrypt:
 
-* With 3 parameters (1 required & 2 optional):
+* key: the key being used (required).
 
-* message: the encrypted text, encrypted number can also be used. It will become a string before encryption, anyway.
+* message: the plain text, encrypted number can also be used. It will become a string before encryption, anyway (required).
 
-* key/keylength: the key specifier.
-
-* * If that parameter is a key you have already generated - you have to pass `true` in the next parameter into the algorithm.
-
-* * If that parameter is a key length (multiplied by 128), you do not have to pass anything to the next parameter.
-
-* * Lastly, for the algorithm to generate a minimal-length key ("K" and 128 secure random numbers), just keep that empty, while the next parameter will also be just empty.
-
-* You will get in return, an Object type with `key` & `cipher` (the password & the result cipher text).
-
-* An example: `await SecureCaesar( "Encrypt", "welcome to the cyberzone!" )`.
+* You will get in return, cipher text with unicode characters.
 
 # Decrypt:
 
-* With 2 required parameters:
+* key: the key being used (required).
 
-* * Ciphertext: The cipher from the previous encryption.
-
-* * Key: The long generated password used for the encryption.
-
-* An example:
-
-```
-const key = 'K13457816176816512081192216512539237719912531209611436596168623515171223121411401253216641971240220315958113130112224255112213920';
-const ciphertext = 'ʡࢯ–Ȗ₱ὄ༘⋭Ηڞ၅৮ିƆᅂ᛾ᯫᎈཿᅲەᲉ᠄ࠏဈ٬↯རːƲ↘᩼᫉ॄࡋ๾߰▶⁼⊷ᵟፖУീ⃍ࢆ୚ᩋ|⃉ᶤᇞ᝶୷Ȥ╇⑑ᑘ࿄≾ᙡఎျਂ';
-const plaintext = await SecureCaesar( "Decrypt", ciphertext, key );
-
-console.log(plaintext); // 'welcome to the cyberzone!'
-
-```
+* Ciphertext: The ciphertext from the previous encryption (required).
 
 ### Enjoy!
