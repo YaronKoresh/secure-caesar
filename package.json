@@ -1,7 +1,7 @@
 {
   "name": "secure-caesar",
   "main": "./index.js",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "secure-caesar cipher, is a symetric key cipher, based on caesar shift cipher. Enhanced with new algorithms, unicode support, PKCS #1 padding, secure password generator with length-by-demand & secure random number generator.",
   "author": "Yaron Koresh <aharonkoresh1@gmail.com>",
   "scripts": {
