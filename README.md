@@ -1,5 +1,5 @@
 
-# secure-caesar v5.0.0 
+# secure-caesar v6.0.0 
 
 ## Made with much screen time & care for the community, by: Yaron Koresh, Israel.
 
@@ -10,6 +10,8 @@
 * Unicode support.
 
 * PKCS #1 padding (version 2).
+
+* Secure random salt, generated with each encryption.
 
 * Versions before v3.0.0 are discovered to be NOT SECURE, because of patterns that are being generated.
 
