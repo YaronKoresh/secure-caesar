@@ -24,8 +24,6 @@
 
 import { Encrypt, Decrypt } from "secure-caesar" // or: const { Encrypt, Decrypt } = await import("secure-caesar");
 
-// Now you have a new global async function, called: "SecureCaesar"
-
 // Select a password
 const password = "gt785fy54dt897rgV#Yf3f98ktu9803xdj,9$#Y$#^TV%$GTB";
 
