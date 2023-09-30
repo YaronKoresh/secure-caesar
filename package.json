@@ -2,7 +2,7 @@
   "name": "secure-caesar",
   "type": "module",
   "main": "./index.mjs",
-  "version": "7.0.1",
+  "version": "7.0.2",
   "description": "secure-caesar cipher, is a symetric key cipher, based on caesar shift cipher. Enhanced with unicode support, custom padding, Scrypt key expander & power usage selection.",
   "author": "Yaron Koresh <aharonkoresh1@gmail.com>",
   "scripts": {
