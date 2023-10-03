@@ -3,7 +3,7 @@
 
 ### Made with much screen time & care for the community, by: Yaron Koresh, Israel.
 
-## This project is licensed under MIT open-source license.
+### This project is licensed under MIT open-source license.
 
 ### Notice: credits for the Scrypt algorithm implementation, belong to Richard Moore, the author of [scrypt-js](https://www.npmjs.com/package/scrypt-js/v/3.0.1). I couldn't use it externally as a CommonJS inside my ESModule project.
 
