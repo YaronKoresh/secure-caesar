@@ -2,8 +2,8 @@
   "name": "secure-caesar",
   "type": "module",
   "main": "./index.mjs",
-  "version": "7.0.2",
-  "description": "secure-caesar cipher, is a symetric key cipher, based on caesar shift cipher. Enhanced with unicode support, custom padding, Scrypt key expander & power usage selection.",
+  "version": "8.0.0",
+  "description": "secure-caesar cipher, is a symetric key cipher, based on caesar shift cipher. Enhanced with unicode support, custom padding, Scrypt key expander, elliptic curve support & power usage selection.",
   "author": "Yaron Koresh <aharonkoresh1@gmail.com>",
   "scripts": {
     "test": "echo \"No test specified\" && exit 0"
@@ -17,6 +17,11 @@
     "url": "https://github.com/YaronKoresh/secure-caesar.git"
   },
  "keywords": [
+    "elliptic",
+    "curve",
+    "cryptography",
+    "ecc",
+    "ecdh",
     "cipher",
     "caesar",
     "encryption",
@@ -30,9 +35,12 @@
     "expander",
     "decryption",
     "symetric",
-    "key"
+    "key",
+    "secret",
+    "password"
   ],
   "dependencies": {
-    "buffer": "^6.0.3"
+    "buffer": "^6.0.3",
+    "@yaronkoresh/bases": "^3.0.0"
   }
 }
